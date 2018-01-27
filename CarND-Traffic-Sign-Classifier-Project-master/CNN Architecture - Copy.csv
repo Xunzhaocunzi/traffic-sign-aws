@@ -1,0 +1,12 @@
+Input Shape,Layer
+"batch_sizex32x32x3	", Convolution 5x5x3x6
+"batch_sizex28x28x6	","Max Pooling (valid, strides = 1x2x2x1)"
+batch_sizex14x14x6, Activation (ReLU)
+"batch_sizex14x14x6	","Convolution (valid, 5x5x1x16)"
+"batch_sizex10x10x16	"," Max Pooling (valid,strides = 1x2x2x1)"
+batch_sizex5x5x16, Activation (ReLU)
+batch_sizex5x5x16, Flatten
+"batch_sizex400	",Full-connected layer(400x120)
+batch_sizex120, Activation (ReLU)
+batch_sizex120,Full-connected layer (120x43)
+batch_sizex43, Activation (Softmax or sigmoid depending on the accuracy of results)
